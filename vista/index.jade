@@ -1,0 +1,27 @@
+html
+ head
+  title Pagina Principal del proyecto
+  link(rel='stylesheet', href='/viewsfiles/bootstrap/bootstrap.css')
+  link(rel='stylesheet', href='/viewsfiles/stylesheets/estilosVentanaRegistro.css')
+ body
+  
+   .container
+    .row
+      .col-12 
+        <br>
+        <br>
+        ul(class="list-group")
+            li(class="list-group-item align-self-center")      
+             a(href="http://localhost:4200/insertarDatos") InsertarDatos
+            li(class="list-group-item align-self-center")
+             a(href="http://localhost:4200/borrarDatos") BorrarDatos
+            li(class="list-group-item align-self-center")
+             a(href="http://localhost:4200/mostrarDatos") ListarDatos
+            li(class="list-group-item align-self-center")
+             a(href="http://localhost:4200/modificarDatos") ModificarDatos  
+        br
+        p(class="parrafo")  #{mensaje} 
+
+ script(src='/viewsfiles/js/jquery-3.2.1.slim.min.js')
+ script(src='/viewsfiles/js/popper.min.js')
+ script(src='/viewsfiles/js/bootstrap.min.js')

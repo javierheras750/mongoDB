@@ -1,0 +1,21 @@
+doctype html
+html
+ head
+   title BorrarDatos
+   link(rel='stylesheet', href='/viewsfiles/bootstrap/bootstrap.css')
+   link(rel='stylesheet', href='/viewsfiles/stylesheets/estilosVentanaRegistro.css')
+ body
+    .container
+      .row  
+          .col-3.mx-auto         
+            form(action="./borrarDatos" method="post")
+              .form-row
+                  label(for="dni")
+                  |Dni
+                  input(type="text" id="dni" name="dni" class="form-control" required)
+              .form-group
+                  input(type="submit" value="BorrarDatos" class="btn btn-success mr-2 my-2")   
+                  input(type="reset" value="Resetear" class="btn btn-success") 
+ script(src='/viewsfiles/js/jquery-3.2.1.slim.min.js')
+ script(src='/viewsfiles/js/popper.min.js')
+ script(src='/viewsfiles/js/bootstrap.min.js')     

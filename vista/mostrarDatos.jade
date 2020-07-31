@@ -1,0 +1,45 @@
+doctype html
+html
+ head
+   title MostrarDatos
+   link(rel='stylesheet', href='/viewsfiles/bootstrap/bootstrap.css')
+   link(rel='stylesheet', href='/viewsfiles/stylesheets/estilosVentanaRegistro.css')
+ body
+  .container
+    table.table
+      thead 
+       tr 
+         th.col-2
+            | #
+         th.col-2
+            | Dni
+         th.col-2
+            | Nombre
+         th.col-2
+            | PrimerApellido
+         th.col-2
+            | SegundoApellido  
+         th.col-2
+            | saldo 
+      tbody
+        each usuario, i in usuarios
+         tr 
+            th.row
+             | #{i+1}
+            td 
+             | #{usuario.dni}
+            td 
+             | #{usuario.nombre}
+            td 
+             | #{usuario.primerApellido}
+            td
+             | #{usuario.segundoApellido}
+            td
+             | #{usuario.cuenta.saldo}   
+
+  a(href="http://localhost:4200/") Regresar           
+ script(src='/viewsfiles/js/jquery-3.2.1.slim.min.js')
+ script(src='/viewsfiles/js/popper.min.js')
+ script(src='/viewsfiles/js/bootstrap.min.js')
+
+

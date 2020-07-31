@@ -1,0 +1,36 @@
+html
+ head
+   title #{title} 
+   link(rel='stylesheet', href='/viewsfiles/bootstrap/bootstrap.css')
+   link(rel='stylesheet', href='/viewsfiles/stylesheets/estilosVentanaRegistro.css')
+ body
+   .container
+    .row
+      .col-12 
+        form(action="./modificarDatos2" method="post")
+          .form-row
+              label(for="dni")
+              |Dni
+              input(type="text" id="dni" name="dni" readonly value="#{usuario.dni}" class="form-control")             
+          .form-row
+              label(for="nombre")
+              |Nombre
+              input(type="text" id="nombre" name="nombre" value="#{usuario.nombre}" class="form-control")
+          .form-row
+              label(for="primerApellido")
+              |PrimerApellido
+              input(type="text" id="primerApellido" name="primerApellido" value="#{usuario.primerApellido}" class="form-control") 
+           .form-row
+              label(for="segundoApellido")
+              |SegundoApellido
+              input(type="text" id="segundoApellido" name="segundoApellido" value="#{usuario.segundoApellido}" class="form-control")      
+           .form-row
+              label(for="saldo")
+              |Saldo
+              input(type="number" id="saldo" name="saldo" value="#{usuario.cuenta.saldo}" class="form-control")               
+          .form-row
+            .form-group
+              input(type="submit" value="Modificar Datos" class="btn btn-success")               
+ script(src='/viewsfiles/js/jquery-3.2.1.slim.min.js')
+ script(src='/viewsfiles/js/popper.min.js')
+ script(src='/viewsfiles/js/bootstrap.min.js')
